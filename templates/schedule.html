@@ -1,0 +1,51 @@
+<!-- schedule.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_promotions.css') }}">
+</head>
+
+<body>
+    <h1>Расписание</h1>
+    <a href="{{ url_for('index') }}">Вернуться на главную страницу</a>
+    <form method="post" action="/schedule" enctype="multipart/form-data">
+        <!-- Форма для добавления записи в расписание -->
+        {{ form.hidden_tag() }}
+        <label for="title">Заголовок:</label>
+        {{ form.title() }}
+
+        <label for="description">Описание:</label>
+        {{ form.description() }}
+
+        <label for="image">Изображение:</label>
+        {{ form.image() }}
+
+        <input type="submit" value="Добавить запись в расписание">
+    </form>
+
+    <div>
+        <!-- Отображение записей в расписании -->
+        {% for schedule_item in schedule_data %}
+        <div class="schedule-item">
+            <h2>{{ schedule_item.title }}</h2>
+            <p>{{ schedule_item.description }}</p>
+            <img src="{{ url_for('uploaded_image', filename=schedule_item.image_url) }}" alt="Запись в расписании">
+
+            <!-- Кнопка удаления записи -->
+            <form method="post" action="{{ url_for('delete_schedule_item', id=schedule_item.id) }}">
+                <input type="submit" value="Удалить">
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Кнопка возврата на главную страницу -->
+    <a href="/">Вернуться на главную страницу</a>
+</body>
+
+</html>

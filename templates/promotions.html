@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акции</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_promotions.css') }}">
+</head>
+
+<body>
+    <h1>Страница акций</h1>
+    <a href="{{ url_for('index') }}">Вернуться на главную страницу</a>
+    <form method="post" action="/promotions" enctype="multipart/form-data">
+        <!-- Форма для добавления акции -->
+        {{ form.hidden_tag() }}
+        <label for="title">Заголовок:</label>
+        {{ form.title() }}
+
+        <label for="description">Описание:</label>
+        {{ form.description() }}
+
+        <label for="image">Изображение:</label>
+        {{ form.image() }}
+
+        <input type="submit" value="Добавить акцию">
+    </form>
+
+    <div>
+        <!-- Отображение акций -->
+        {% for promotion in promotions_data %}
+        <div class="promotion">
+    <h2>{{ promotion.title }}</h2>
+    <p>{{ promotion.description }}</p>
+    <img src="{{ url_for('uploaded_promotion', filename=promotion.image_url) }}" alt="Акция">
+
+    <!-- Кнопка удаления записи -->
+    <form method="post" action="{{ url_for('delete_promotion', id=promotion.id) }}">
+        <input type="submit" value="Удалить акцию">
+    </form>
+        </div>
+{% endfor %}
+    </div>
+
+    <!-- Кнопка возврата на главную страницу -->
+    <a href="/">Вернуться на главную страницу</a>
+</body>
+
+</html>
+

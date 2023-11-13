@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form label {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    width: 100%;
+}
+
+.promotion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.promotion img {
+    width: auto;
+    height: 20vw;
+    margin-right: 20px;
+}
+
+.promotion .info {
+    width: calc(60% - 20px); /* 60% экрана, учтено поле margin-right: 20px у фото */
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promotion h2,
+.promotion p {
+    width: 30%;
+    height: 20vw;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Граница */
+    text-align: left; /* Выравнивание текста по левому краю */
+    margin: 0;
+}
+
+/* Отображение на мобильных устройствах */
+@media screen and (max-width: 600px) {
+    form input,
+    form textarea,
+    form input[type="submit"] {
+        width: 100%;
+    }
+
+    .promotion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .promotion img {
+        margin: 10px 0;
+        margin-right: 0;
+    }
+
+    .promotion .info {
+        width: 100%;
+    }
+
+    .promotion h2,
+    .promotion p {
+        width: 100%;
+        text-align: left; /* Выравнивание текста по левому краю */
+    }
+}

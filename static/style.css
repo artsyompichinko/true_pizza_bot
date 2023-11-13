@@ -1,0 +1,79 @@
+/* static/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Модальное окно */
+#confirmationModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+#confirmationModal p {
+    margin-bottom: 15px;
+}
+
+#confirmationModal button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#confirmationModal button:last-child {
+    margin-right: 0;
+}
+
+.promotion {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.promotion img {
+    width: 15vw;
+    height: auto; /* Это обеспечит пропорциональное изменение высоты */
+}
+
+/* Дополнительные стили, чтобы изображения выглядели лучше */
+
+
+/* Стили для формы добавления акции */
+form {
+    margin-bottom: 20px;
+}
