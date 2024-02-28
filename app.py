@@ -150,7 +150,7 @@ def delete_promotion(id):
     db.session.delete(promotion)
     db.session.commit()
 
-    # Возвращаем JSON-ответ для обработки на стороне клиента
+
     return redirect(url_for('promotions'))
 
 @app.route('/uploads/schedule/<filename>')
@@ -191,7 +191,7 @@ def delete_schedule_item(id):
     db.session.commit()
 
     # Возвращаем JSON-ответ для обработки на стороне клиента
-    return jsonify({'status': 'success', 'deleted_schedule_item_id': schedule_item.id})
+    return redirect(url_for('schedule'))
 
 
 # ... другие обработчики ...
@@ -202,7 +202,3 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
-if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-    app.run(debug=True)
