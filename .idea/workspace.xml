@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="06b2ddae-f682-4e1b-8d28-8255ea868225" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/true_pizza_bot/self.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/self.py" beforeDir="false" afterPath="$PROJECT_DIR$/self.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/true_pizza_bot" beforeDir="false" afterPath="$PROJECT_DIR$/true_pizza_bot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +37,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/37529/PycharmProjects/true_pizza_bot",
+    "last_opened_file_path": "C:/Users/37529/PycharmProjects/pythonProject",
     "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
